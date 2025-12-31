@@ -1,0 +1,64 @@
+.prepaid-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.left-banner {
+  flex: 1;
+  background: url('/assets/images/vodafone.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+.left-banner h1 {
+  margin-top: 5px;
+  font-size: 36px;
+}
+
+.left-banner p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+
+.right-content {
+  flex: 1;
+  padding: 50px 30px;
+}
+
+.breadcrumb {
+  color: #6f78eb;
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.mobile-input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.proceed-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #df3240;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.proceed-btn:hover {
+  background: #e7c83b;
+}

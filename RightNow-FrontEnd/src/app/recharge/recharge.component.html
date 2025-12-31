@@ -1,0 +1,146 @@
+<div class="recharge-container">
+
+  <div class="left-panel">
+    <h3 class="title">Find a Plan</h3>
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Search ₹, data, validity..."
+        [(ngModel)]="searchText"
+        (ngModelChange)="scrollToFirstMatch()">
+      <span>🔍</span>
+    </div>
+
+    <p class="hint">Search across all modem packs</p>
+  </div>
+
+  <div class="right-panel" (scroll)="onScroll($event)" #scrollArea>
+
+    <div class="fixed-header">
+      <div class="breadcrumb">
+        Recharge <span>›</span> Modem <span>›</span> All Packs
+      </div>
+
+      <h2 class="page-title">Modem Packs</h2>
+
+      <div class="tabs">
+        <span
+          *ngFor="let tab of tabs"
+          [class.active]="activeTab === tab.id"
+          (click)="scrollTo(tab.id)">
+          {{ tab.label }}
+        </span>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <ng-container *ngFor="let tab of tabs">
+
+        <section
+          class="plan-section"
+          [attr.id]="tab.id"
+          *ngIf="shouldShowSection(tab)">
+
+          <h3>{{ tab.label }}</h3>
+
+          <div
+            class="pack-card"
+            *ngFor="let plan of getFilteredPlans(tab.plans)">
+
+            <div class="pack-details">
+              <div>
+                <h3>₹{{ plan.price }}</h3>
+                <p>Price</p>
+              </div>
+              <div>
+                <h3>{{ plan.data }}</h3>
+                <p>Data</p>
+              </div>
+              <div>
+                <h3>{{ plan.validity }}</h3>
+                <p>Validity</p>
+              </div>
+              <span class="arrow">›</span>
+            </div>
+
+            <div class="pack-footer">
+              {{ plan.offer }}
+              <span class="view"
+                    (click)="openPackDetails(plan)">
+                VIEW DETAILS
+              </span>
+            </div>
+
+          </div>
+        </section>
+
+      </ng-container>
+
+      <p *ngIf="showNoResults"
+         style="text-align:center;color:#777;margin-top:40px;">
+        No packs found
+      </p>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-overlay" *ngIf="selectedPack">
+
+  <div class="modal-box">
+
+    <span class="close" (click)="closeModal()">×</span>
+
+    <h1 class="price">₹{{ selectedPack.price }}</h1>
+
+    <div class="banner">
+      <strong>New packs, more benefits</strong>
+      <p>with 5G Plus</p>
+    </div>
+
+    <div class="benefit-row">
+      <div class="benefit-box">
+        <strong>Unlimited</strong>
+        <span>Calls</span>
+      </div>
+      <div class="benefit-box">
+        <strong>{{ selectedPack.data }}</strong>
+        <span>Data</span>
+      </div>
+    </div>
+
+    <div class="benefit-row">
+      <div class="benefit-box">
+        <strong>{{ selectedPack.validity }}</strong>
+        <span>Validity</span>
+      </div>
+      <div class="benefit-box">
+        <strong>100 SMS</strong>
+        <span>/ Day</span>
+      </div>
+    </div>
+
+    <details *ngIf="selectedPack.extraBenefits?.length" class="expand">
+      <summary>More Rewards</summary>
+      <ul>
+        <li *ngFor="let benefit of selectedPack.extraBenefits">
+          ✔ {{ benefit }}
+        </li>
+      </ul>
+    </details>
+
+    <details class="expand">
+      <summary>Terms & Conditions</summary>
+      <p>Fair usage policy applicable. Benefits subject to validity.</p>
+    </details>
+
+    <button class="recharge-btn"
+            (click)="goToEligibility(selectedPack)">
+      Recharge Now
+    </button>
+
+  </div>
+</div>

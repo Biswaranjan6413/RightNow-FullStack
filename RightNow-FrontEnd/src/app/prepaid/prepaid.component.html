@@ -1,0 +1,26 @@
+<div class="prepaid-container">
+
+  <div class="left-banner">
+    <h1>Recharge Online</h1>
+    <p>Faster recharges - anywhere, any time</p>
+  </div>
+
+  <div class="right-content">
+    <div class="breadcrumb">Recharge > Prepaid</div>
+
+    <h2>Prepaid Mobile Recharge</h2>
+    <p class="desc">Recharge your number for validity, talktime or data</p>
+
+    <label class="label">Mobile Number</label>
+    <input
+      type="text"
+      maxlength="10"
+      placeholder="Enter your 10-digit mobile number"
+      [(ngModel)]="mobile"
+      class="mobile-input"
+    /><br>
+
+    <button type="button" class="proceed-btn" (click)="submitNumber()">Proceed</button>
+  </div>
+
+</div>
