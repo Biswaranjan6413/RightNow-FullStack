@@ -1,0 +1,255 @@
+.recharge-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.left-panel {
+  width: 280px;
+  padding: 25px;
+  background: #fff;
+  border-right: 1px solid #eee;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+.hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777;
+}
+
+.right-panel {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.fixed-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  padding: 20px 30px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.page-title {
+  margin: 0 0 15px;
+}
+
+.tabs {
+  display: flex;
+  gap: 25px;
+}
+
+.tabs span {
+  cursor: pointer;
+  color: #666;
+  padding-bottom: 8px;
+}
+
+.tabs span.active {
+  font-weight: bold;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.content {
+  padding: 30px;
+}
+
+.plan-section {
+  padding-bottom: 40px;
+}
+
+.pack-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.pack-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.pack-details p {
+  font-size: 12px;
+  color: #666;
+}
+
+.arrow {
+  font-size: 22px;
+}
+
+.pack-footer {
+  background: linear-gradient(to right, #ff3b3b, #ff1f1f);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.view {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  width: 380px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  position: relative;
+  animation: scaleIn 0.3s ease;
+}
+
+.modal-box .close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+}
+
+.modal-box .price {
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.modal-box .banner {
+  background: #f5f7ff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.modal-box .banner strong {
+  font-size: 14px;
+}
+
+.modal-box .banner p {
+  font-size: 12px;
+  margin: 2px 0 0;
+  color: #555;
+}
+
+.benefit-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.benefit-box {
+  flex: 1;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.benefit-box strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.benefit-box span {
+  font-size: 12px;
+  color: #666;
+}
+
+.expand {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.expand summary {
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+.expand summary::after {
+  content: "⌄";
+  float: right;
+  font-size: 14px;
+}
+
+.expand ul {
+  margin: 8px 0 0 16px;
+  font-size: 13px;
+}
+
+.expand p {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.recharge-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
