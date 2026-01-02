@@ -11,16 +11,16 @@ export class RegisterComponent {
   lastname: string = '';
   email: string = '';
   phone: string = '';
+  addressVisible: boolean = false;  
 
   register() {
-
     if (this.firstname.length < 3) {
       alert("Firstname must be at least 3 letters");
       return;
     }
 
-    if (this.lastname.length < 3) {
-      alert("Lastname must be at least 3 letters");
+    if (this.lastname.length < 1) {
+      alert("Lastname must be at least 1 letter");
       return;
     }
 
@@ -34,5 +34,9 @@ export class RegisterComponent {
       return;
     }
     alert("Registration Successful!");
+  }
+
+  showAddressContainer() {
+    this.addressVisible = true;
   }
 }

@@ -1,6 +1,6 @@
 <h2>Registration Form</h2>
 
-<form (ngSubmit)="register()">
+<form (ngSubmit)="register()" class="registration-form">
 
   <label>First Name:</label><br>
   <input type="text" [(ngModel)]="firstname" name="firstname"><br><br>
@@ -14,6 +14,10 @@
   <label>Phone Number:</label><br>
   <input type="text" [(ngModel)]="phone" name="phone"><br><br>
 
+  <button type="button" (click)="showAddressContainer()" class="address-btn">Address</button><br><br>
   <button type="submit">Register</button>
 
 </form>
+
+<div *ngIf="addressVisible" class="address-container">
+</div>
