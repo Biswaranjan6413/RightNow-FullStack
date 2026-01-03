@@ -14,8 +14,9 @@
   <label>Phone Number:</label><br>
   <input type="text" [(ngModel)]="phone" name="phone"><br><br>
 
-  <button type="button" (click)="showAddressContainer()" class="address-btn">Address</button><br><br>
-  <button type="submit">Register</button>
+  <a routerLink="/register-address"><button type="button" (click)="showAddressContainer()" class="address-btn">Address</button><br><br>
+  <button type="submit">Register</button></a>
+  
 
 </form>
 

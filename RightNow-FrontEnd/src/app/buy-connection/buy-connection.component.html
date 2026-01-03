@@ -1,0 +1,15 @@
+<h2 class="title">Buy a new connection</h2>
+
+<div class="connection-container">
+  <div 
+    class="connection-item"
+    *ngFor="let item of connections"
+    [routerLink]="item.route"
+  >
+    <div class="icon-circle">
+      <mat-icon>{{ item.icon }}</mat-icon>
+    </div>
+    <p>{{ item.name }}</p>
+  </div>
+</div>
+

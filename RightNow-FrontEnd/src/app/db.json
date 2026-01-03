@@ -1,0 +1,212 @@
+{
+  "registrations": [
+    {
+      "id": "f2a6",
+      "firstname": "Nalla",
+      "lastname": "Chandana",
+      "email": "nallachandana193@gmail.com",
+      "phone": "09390441208",
+      "idProofType": "Aadhaar",
+      "idProofNumber": "09509428509148",
+      "idProofFile": "WhatsApp Image 2025-04-04 at 2.54.55 PM.jpeg",
+      "alternatePhone": "8886045116",
+      "address": {
+        "current": {
+          "house": "55",
+          "street": "guindy",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "permanent": {
+          "house": "55",
+          "street": "guindy",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "sameAsCurrent": true
+      }
+    },
+    {
+      "id": "8463",
+      "firstname": "Nalla",
+      "lastname": "Chandana",
+      "email": "nallachandana193@gmail.com",
+      "phone": "09390441208",
+      "idProofType": "PAN",
+      "idProofNumber": "9048504",
+      "idProofFile": "WhatsApp Image 2025-04-04 at 2.54.55 PM.jpeg",
+      "alternatePhone": "985408094",
+      "address": {
+        "current": {
+          "house": "444",
+          "street": "fdgk",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "permanent": {
+          "house": "444",
+          "street": "fdgk",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "sameAsCurrent": true
+      }
+    },
+    {
+      "id": "a070",
+      "firstname": "sree",
+      "lastname": null,
+      "email": "kdfjow@0394820",
+      "phone": "093248029dkfj",
+      "idProofType": "Passport",
+      "idProofNumber": "oi3ure3n",
+      "idProofFile": null,
+      "alternatePhone": "3o2i4i023",
+      "address": {
+        "current": {
+          "house": "342",
+          "street": "dnfdsk",
+          "city": "kns,dn",
+          "pincode": "23094"
+        },
+        "permanent": {
+          "house": "342",
+          "street": "dnfdsk",
+          "city": "kns,dn",
+          "pincode": "23094"
+        },
+        "sameAsCurrent": true
+      }
+    },
+    {
+      "id": "415c",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "phone": "",
+      "idProofType": "",
+      "idProofNumber": "",
+      "idProofFile": "",
+      "alternatePhone": "",
+      "address": {
+        "current": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "permanent": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "sameAsCurrent": false
+      }
+    },
+    {
+      "id": "9d31",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "phone": "",
+      "idProofType": "",
+      "idProofNumber": "",
+      "idProofFile": "",
+      "alternatePhone": "",
+      "address": {
+        "current": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "permanent": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "sameAsCurrent": false
+      }
+    },
+    {
+      "id": "9a06",
+      "firstname": "Nalla",
+      "lastname": "Chandana",
+      "email": "nallachandana193@gmail.com",
+      "phone": "09390441208",
+      "idProofType": "",
+      "idProofNumber": "",
+      "idProofFile": "",
+      "alternatePhone": "",
+      "address": {
+        "current": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "permanent": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "sameAsCurrent": false
+      }
+    },
+    {
+      "id": "26f2",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "phone": "",
+      "idProofType": "",
+      "idProofNumber": "09348530",
+      "idProofFile": "",
+      "alternatePhone": "",
+      "address": {
+        "current": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "permanent": {
+          "house": "",
+          "street": "",
+          "city": "",
+          "pincode": ""
+        },
+        "sameAsCurrent": false
+      }
+    },
+    {
+      "id": "856d",
+      "firstname": "Nalla",
+      "lastname": "Chandana",
+      "email": "nallachandana193@gmail.com",
+      "phone": "9390441208",
+      "idProofType": "Aadhaar",
+      "idProofNumber": "3485903705",
+      "idProofFile": "WhatsApp Image 2025-04-04 at 2.55.42 PM.jpeg",
+      "alternatePhone": "0984093293",
+      "address": {
+        "current": {
+          "house": "74",
+          "street": "jdhf",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "permanent": {
+          "house": "74",
+          "street": "jdhf",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "sameAsCurrent": true
+      }
+    }
+  ]
+}
