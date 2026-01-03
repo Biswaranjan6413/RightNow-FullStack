@@ -1,0 +1,131 @@
+<h2>Registration Form</h2>
+
+<form [formGroup]="regForm" (ngSubmit)="register()" class="registration-form">
+
+  
+  <div class="form-row">
+    <div class="form-field">
+      <label>First Name <span class="required">*</span></label>
+      <input type="text" formControlName="firstname">
+      <div class="error" *ngIf="regForm.get('firstname')?.touched && regForm.get('firstname')?.invalid">
+  First Name is required
+</div>
+    </div>
+
+    <div class="form-field">
+      <label>Last Name</label>
+      <input type="text" formControlName="lastname">
+    </div>
+
+    <div class="form-field">
+      <label>Email <span class="required">*</span></label>
+      <input type="text" formControlName="email">
+      <div class="error" *ngIf="regForm.get('email')?.touched && regForm.get('email')?.invalid">
+      Enter valid email
+    </div>
+
+    </div>
+
+    <div class="form-field">
+      <label>Phone Number <span class="required">*</span></label>
+      <input type="text" formControlName="phone">
+       <div class="error" *ngIf="regForm.get('phone')?.touched && regForm.get('phone')?.invalid">
+       Enter 10 digit phone number
+       </div>
+    </div>
+  </div>
+
+ 
+  <div class="form-row">
+    
+    <div class="form-field">
+  <label>ID Proof Type <span class="required">*</span></label>
+  <select
+    formControlName="idProofType"
+    (change)="onIdProofChange()"
+    class="form-select">
+    <option value="">Select</option>
+    <option value="Aadhaar">Aadhaar</option>
+    <option value="PAN">PAN</option>
+    <option value="Passport">Passport</option>
+  </select>
+  <div class="error" *ngIf="regForm.get('idProofType')?.touched && regForm.get('idProofType')?.invalid">
+  ID Proof Type is required
+</div>
+</div>
+
+    <div class="form-field">
+      <label>ID Proof Number <span class="required">*</span></label>
+      <input type="text" formControlName="idProofNumber">
+      <div class="error" *ngIf="regForm.get('idProofNumber')?.touched && regForm.get('idProofNumber')?.invalid">
+  ID Proof Number is required
+</div>
+    </div>
+
+    <div class="form-field">
+      <label>Alternate Mobile Number</label>
+      <input type="text" formControlName="alternatePhone">
+    </div>
+  </div>
+
+  <div class="form-row" *ngIf="showFileUpload">
+    <div class="form-field">
+      <label>Upload ID Proof</label>
+      <input type="file"
+             (change)="onFileSelect($event)"
+             accept=".jpg,.jpeg,.png,.pdf">
+      <small>Accepted: JPG, PNG, PDF</small>
+    </div>
+  </div>
+
+ 
+  <div class="address-wrapper">
+
+    <div class="address-header" (click)="toggleAddress()">
+      <span>Address</span>
+      <span>{{ showAddress ? '−' : '+' }}</span>
+    </div>
+
+    <div *ngIf="showAddress" class="address-content" formGroupName="address">
+
+      <label>
+        <input type="checkbox"
+               formControlName="sameAsCurrent"
+               (change)="copyAddress($event)">
+        Same as Current Address
+      </label>
+
+      <div class="address-columns">
+
+        <div class="address-box" formGroupName="current">
+          <div class="address-title">Current Address</div>
+          <input type="text" placeholder="House No" formControlName="house">
+          <input type="text" placeholder="Street" formControlName="street">
+          <input type="text" placeholder="City" formControlName="city">
+          <input type="text" placeholder="Pincode" formControlName="pincode">
+          <div class="error" *ngIf="
+  regForm.get('address.current')?.invalid &&
+  regForm.get('address.current')?.touched">
+  Current Address is required
+</div>
+        </div>
+
+        <div class="address-box" formGroupName="permanent">
+          <div class="address-title">Permanent Address</div>
+          <input type="text" placeholder="House No" formControlName="house">
+          <input type="text" placeholder="Street" formControlName="street">
+          <input type="text" placeholder="City" formControlName="city">
+          <input type="text" placeholder="Pincode" formControlName="pincode">
+          <div class="error" *ngIf="
+  regForm.get('address.current')?.invalid &&
+  regForm.get('address.current')?.touched">
+  Permanent Address is required
+</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="regForm.invalid">Register</button>
+</form>

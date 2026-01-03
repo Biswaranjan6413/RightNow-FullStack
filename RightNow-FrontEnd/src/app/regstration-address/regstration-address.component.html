@@ -1,0 +1,46 @@
+<form [formGroup]="regForm">
+  
+  <!-- Address Button -->
+  <div class="address-wrapper">
+
+  <!-- Header -->
+  <div class="address-header" (click)="toggleAddress()">
+    <span>Address</span>
+    <span class="toggle-icon">
+      {{ showAddress ? '−' : '+' }}
+    </span>
+  </div>
+
+  <!-- Body -->
+  <div *ngIf="showAddress" class="address-content">
+
+    <div class="address-columns">
+
+      <!-- Current Address -->
+      <div class="address-box">
+        <div class="address-title">Current Address</div>
+
+        <input type="text" placeholder="House No">
+        <input type="text" placeholder="Street">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="Pincode">
+      </div>
+
+      <!-- Permanent Address -->
+      <div class="address-box">
+        <div class="address-title">Permanent Address</div>
+
+        <input type="text" placeholder="House No">
+        <input type="text" placeholder="Street">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="Pincode">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+</form>

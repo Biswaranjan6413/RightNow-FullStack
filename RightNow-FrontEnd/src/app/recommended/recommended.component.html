@@ -1,0 +1,18 @@
+<h2 class="title">Recommended for you</h2>
+
+<div class="slider" #slider>
+  <div class="card" *ngFor="let item of cards">
+    <img [src]="item.img" alt="" />
+
+    <div class="content">
+      <small>{{ item.type }}</small>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.desc }}</p>
+
+      <div class="actions">
+        <button class="buy">BUY NOW</button>
+        <a>LEARN MORE</a>
+      </div>
+    </div>
+  </div>
+</div>
