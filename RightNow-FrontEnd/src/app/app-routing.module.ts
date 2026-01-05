@@ -47,7 +47,8 @@ const routes: Routes = [
   { path: 'privacy-policy', component: PrivacyPolicyComponent},
   { path: 'terms-conditions', component: TermsConditionsComponent},
  {path: 'postpaid', component: PostPaidComponent},
-  {path: 'viewplan', component: ViewPlanComponent}
+  {path: 'viewplan', component: ViewPlanComponent},
+  
 
   { path: 'about-us', component: AboutUsComponent },
   { path: 'careers', component: CareersComponent },
