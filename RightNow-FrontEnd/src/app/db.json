@@ -207,6 +207,87 @@
         },
         "sameAsCurrent": true
       }
+    },
+    {
+      "id": "cbc1",
+      "firstname": "Nalla",
+      "lastname": "Chandana",
+      "email": "nallachandana193@gmail.com",
+      "phone": "9390441208",
+      "idProofType": "Passport",
+      "idProofNumber": "894309823734",
+      "idProofFile": "vlcsnap-2025-02-14-12h14m38s610.png",
+      "alternatePhone": "2139487208",
+      "address": {
+        "current": {
+          "house": "92",
+          "street": "df",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "permanent": {
+          "house": "92",
+          "street": "df",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "sameAsCurrent": true
+      }
+    },
+    {
+      "id": "757b",
+      "firstname": "Nalla",
+      "lastname": "Chandana",
+      "email": "nallachandana193@gmail.com",
+      "phone": "9390441208",
+      "idProofType": "Aadhaar",
+      "idProofNumber": "34835809",
+      "idProofFile": "WhatsApp Image 2025-04-04 at 2.58.52 PM.jpeg",
+      "alternatePhone": "98471298759",
+      "address": {
+        "current": {
+          "house": "66",
+          "street": "kalasamandha",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "permanent": {
+          "house": "66",
+          "street": "kalasamandha",
+          "city": "Chennai",
+          "pincode": "600089"
+        },
+        "sameAsCurrent": true
+      }
+    },
+    {
+      "id": "6e3b",
+      "firstname": "keerthi",
+      "lastname": "nalla",
+      "email": "keerthi@gmail.com",
+      "phone": "1234567891",
+      "idProofType": "Passport",
+      "idProofNumber": "6677788989",
+      "idProofFile": "e11f5b4b-f993-4c3e-b435-d554492deee9.jpeg",
+      "alternatePhone": "8976543219",
+      "address": {
+        "current": {
+          "house": "66",
+          "street": "hfdksjl",
+          "city": "khsdfaj",
+          "pincode": "888888"
+        },
+        "sameAsCurrent": true
+      }
+    }
+  ],
+  "contacts": [
+    {
+      "id": "3ec6",
+      "name": "Nalla Chandana",
+      "email": "nallachandana193@gmail.com",
+      "mobile": "9390441208",
+      "message": "I want to buy new connenction, please help me to how to buy."
     }
   ]
 }

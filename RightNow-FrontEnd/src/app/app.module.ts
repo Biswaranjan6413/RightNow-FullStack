@@ -17,6 +17,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { CareersComponent } from './careers/careers.component';
+import { OffersComponent } from './offers/offers.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +42,16 @@ import { LoginComponent } from './login/login.component';
     RecommendedComponent,
     RegstrationAddressComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent,
+    AboutUsComponent,
+    CareersComponent,
+    OffersComponent,
+    HelpCenterComponent,
+    ContactUsComponent,
+    FaqsComponent,
+    PrivacyPolicyComponent,
+    TermsConditionsComponent
   ],
   imports: [
     BrowserModule,

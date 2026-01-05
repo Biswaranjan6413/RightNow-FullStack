@@ -12,6 +12,7 @@ export class RegistrationComponent {
  regForm: FormGroup;
   showAddress = false;
   showFileUpload = false;
+  formSubmitted = false;
   
 
   constructor(private fb: FormBuilder,
@@ -50,12 +51,24 @@ export class RegistrationComponent {
     this.showAddress = !this.showAddress;
   }
 
-  copyAddress(event: any) {
-    if (event.target.checked) {
-      const current = this.regForm.get('address.current')?.value;
-      this.regForm.get('address.permanent')?.patchValue(current);
-    }
+  // copyAddress(event: any) {
+  //   if (event.target.checked) {
+  //     const current = this.regForm.get('address.current')?.value;
+  //     this.regForm.get('address.permanent')?.patchValue(current);
+  //   }
+  // }
+ copyAddress(event: any) {
+  const permanentGroup = this.regForm.get('address.permanent');
+
+  if (event.target.checked) {
+    const current = this.regForm.get('address.current')?.value;
+    permanentGroup?.patchValue(current);
+    permanentGroup?.disable();
+  } else {
+    permanentGroup?.reset();
+    permanentGroup?.enable();
   }
+}
 
   onIdProofChange() {
     const type = this.regForm.get('idProofType')?.value;
@@ -71,10 +84,41 @@ export class RegistrationComponent {
     }
   }
 
-  register() {
- this.regService.saveRegistration(this.regForm.value)
-      .subscribe(() => {
-        alert('Registration Saved Successfully!');
-        this.regForm.reset();
-      });  }
+//   register() {
+//  this.regService.saveRegistration(this.regForm.value)
+//       .subscribe(() => {
+//         alert('Registration Saved Successfully!');
+//         this.regForm.reset();
+//       });  }
+
+// register() {
+//   if (this.regForm.invalid) {
+//     this.regForm.markAllAsTouched();
+//     return;
+//   }
+
+//   this.regService.saveRegistration(this.regForm.value)
+//     .subscribe(() => {
+//       alert('Registration Saved Successfully!');
+//       this.regForm.reset();
+//     });
+// }
+
+
+register() {
+  this.formSubmitted = true;
+
+  if (this.regForm.invalid) {
+    this.regForm.markAllAsTouched();
+    return;
+  }
+
+  this.regService.saveRegistration(this.regForm.value)
+    .subscribe(() => {
+      alert('Registration Saved Successfully!');
+      this.regForm.reset();
+      this.formSubmitted = false;
+    });
+}
+
 }

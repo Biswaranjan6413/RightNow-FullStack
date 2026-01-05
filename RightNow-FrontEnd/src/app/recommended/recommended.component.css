@@ -1,4 +1,4 @@
-.title {
+/* .title {
   text-align: center;
   margin: 20px 0;
   font-weight: 600;
@@ -58,4 +58,110 @@
   color: blue;
   font-weight: 600;
   cursor: pointer;
+} */
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 60px;
+  color: rgb(224, 2, 2);
+}
+
+.table-container {
+  background: #ffffff;
+  padding: 82px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+/* ===== HEADER ===== */
+thead th {
+  background: #0b3a7e;
+  color: #ffffff;
+  padding: 25px;
+  font-weight: 600;
+  text-align: center;
+  border-right: 1.5px solid #1c4c9c;
+}
+
+thead th:first-child {
+  border-top-left-radius: 6px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 6px;
+  border-right: none;
+}
+
+/* ===== BODY ROWS ===== */
+tbody tr {
+  background: #ffffff;
+}
+
+tbody td {
+  padding: 40px;
+  border-bottom: 1px solid #e0e6ef;
+  border-right: 1px solid #e0e6ef;
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+/* Alternate row color */
+tbody tr:nth-child(even) {
+  background: #f7f9fc;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background: #eef4ff;
+}
+
+/* ===== PLAN NAME ===== */
+.plan-name {
+  font-weight: 600;
+  color: #0b3a7e;
+  text-align: left;
+  width: 22%;
+}
+
+/* ===== OTT COLUMN ===== */
+.ott-column {
+  text-align: left;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===== LIVE TV COLUMN ===== */
+.live-tv {
+  font-weight: 500;
+  color: #444;
+}
+
+/* ===== PRICE ===== */
+.price {
+  font-weight: 600;
+  color: #000;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+  table {
+    font-size: 13px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 12px;
+  }
 }

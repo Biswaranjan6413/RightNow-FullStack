@@ -1,0 +1,86 @@
+<section class="contact-us">
+  <div class="contact-container">
+
+    <h2>Contact Us</h2>
+
+    <p class="intro">
+      Have questions about our Wi-Fi plans or need assistance?
+      Our support team is here to help you.
+    </p>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>    RightNow Networks, India</p>
+        <p>📞 1800-123-456</p>
+        <p>✉️ support@rightnow.com</p>
+
+        <div class="working-hours">
+          <h4>Working Hours</h4>
+          <p>Monday – Saturday: 9 AM – 8 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+
+    
+      <!-- <form class="contact-form">
+        <h3>Send Us a Message</h3>
+
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email Address" />
+        <input type="text" placeholder="Mobile Number" />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+
+        <button type="submit">Submit</button>
+      </form> -->
+  
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitForm()"
+>        <h3>Send Us a Message</h3>
+        <input
+        type="text"
+        formControlName="name"
+        placeholder="Full Name"
+       />
+        <small *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+            Name is required
+        </small>
+
+            <input
+                type="email"
+                formControlName="email"
+                placeholder="Email Address"
+            />
+        <small *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+            Valid email is required
+        </small>
+
+  <input
+    type="text"
+    formControlName="mobile"
+    placeholder="Mobile Number"
+  />
+  <small *ngIf="contactForm.get('mobile')?.touched && contactForm.get('mobile')?.invalid">
+    Enter valid 10-digit mobile number
+  </small>
+
+  <textarea
+    rows="4"
+    formControlName="message"
+    placeholder="Your Message"
+  ></textarea>
+  <small *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+    Message is required
+  </small>
+
+  <button type="submit" [disabled]="contactForm.invalid">
+    Submit
+  </button>
+</form>
+
+
+    </div>
+
+  </div>
+</section>
+
