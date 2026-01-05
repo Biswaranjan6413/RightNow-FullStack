@@ -1,4 +1,4 @@
-<h2 class="title">Recommended for you</h2>
+<!-- <h2 class="title">Recommended for you</h2>
 
 <div class="slider" #slider>
   <div class="card" *ngFor="let item of cards">
@@ -15,4 +15,30 @@
       </div>
     </div>
   </div>
+</div> -->
+<h2 class="title">Choose your ultimate plan</h2>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Plan name</th>
+        <th>Premium OTT</th>
+        <th>Live TV</th>
+        <th *ngFor="let speed of speeds">{{ speed }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let plan of plans">
+        <td class="plan-name">{{ plan.name }}</td>
+        <td class="ott-column">{{ plan.ott }}</td>
+        <td class="live-tv">{{ plan.liveTv }}</td>
+
+        <td *ngFor="let price of plan.prices" class="price">
+          ₹{{ price.amount }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

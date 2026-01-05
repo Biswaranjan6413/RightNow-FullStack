@@ -56,17 +56,19 @@ button:disabled {
 /* Full page background */
 .login-page {
   height: 100vh;
-  background: linear-gradient(135deg, #5b2be0, #7b2ff7);
+  background: url(/assets/wifiban.png);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 80px;
   box-sizing: border-box;
+  background-repeat: no-repeat; 
+  
 }
 
 /* Card */
 .login-card {
-  width: 360px;
+  width: 328px;
   background: #ffffff;
   padding: 30px;
   border-radius: 12px;
@@ -94,7 +96,7 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 90%;
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -126,7 +128,7 @@ small {
 
 /* Button */
 button {
-  width: 100%;
+  width:99%;
   padding: 12px;
   background: #1f3c88;
   color: #fff;
@@ -137,7 +139,4 @@ button {
   cursor: pointer;
 }
 
-button:disabled {
-  background: #aab3d4;
-  cursor: not-allowed;
-}
+

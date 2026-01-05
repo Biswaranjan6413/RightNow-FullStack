@@ -1,0 +1,47 @@
+.terms {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.terms-container {
+  max-width: 900px;
+  margin: auto;
+  color: #333;
+}
+
+.terms-container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.updated {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.intro {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Sections */
+.terms-section {
+  margin-bottom: 25px;
+}
+
+.terms-section h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #e60000;
+}
+
+.terms-section p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}

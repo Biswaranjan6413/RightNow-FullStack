@@ -1,0 +1,30 @@
+<section class="faqs">
+  <div class="faqs-container">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <p class="intro">
+      Find quick answers to common questions about RightNow Wi-Fi services.
+    </p>
+
+    <div class="faq-list">
+
+      <div
+        class="faq-item"
+        *ngFor="let faq of faqs; let i = index"
+      >
+        <div class="faq-question" (click)="toggleFAQ(i)">
+          <h4>{{ faq.question }}</h4>
+          <span>{{ faq.open ? '−' : '+' }}</span>
+        </div>
+
+        <div class="faq-answer" *ngIf="faq.open">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+

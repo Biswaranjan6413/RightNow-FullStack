@@ -1,3 +1,4 @@
+
 h2{
   text-align: center;
   padding: 30px;
@@ -15,10 +16,11 @@ span{
   color: red;
   font-size: 12px;
 }
+
 .registration-form {
   max-width: 1500px;
-  margin: 30px auto;
-  padding: 30px;
+  margin: -58px auto;
+  padding: 78px;
   background: #ffffff;
 }
 
@@ -112,8 +114,16 @@ span{
 }
 
 .address-content {
-  padding: 25px;
-  background: #f9f9f9;
+  padding: 1px 50px 50px 50px;
+  background: #efefef;
+}
+
+.address-content label {
+  display: block;          
+  margin: 12px 0;         
+  padding: 10px 14px;    
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .address-columns {
@@ -124,7 +134,7 @@ span{
 
 .address-box {
   background: #ffffff;
-  padding: 20px;
+  padding: 40px;
   border-radius: 8px;
   border: 1px solid #e0e0e0;
 }
@@ -150,6 +160,9 @@ span{
   outline: none;
   border-color: rgb(224, 2, 2);
   box-shadow: 0 0 0 2px rgba(230, 0, 0, 0.15);
+}
+.form-error{
+  padding: 20px;
 }
 
 button[type="submit"] {
