@@ -1,0 +1,59 @@
+{
+  "postRequests": [
+    {
+      "id": "a2f7",
+      "connection": "New Connection",
+      "mobile": "9876789098",
+      "name": "kaviya",
+      "city": "chennai",
+      "area": "thuraipakkam",
+      "pincode": "627002"
+    },
+    {
+      "id": "6160",
+      "connection": "New Connection",
+      "mobile": "9876789098",
+      "name": "kaviya",
+      "city": "chennai",
+      "area": "thuraipakkam",
+      "pincode": "627002"
+    },
+    {
+      "id": "1b45",
+      "connection": "Prepaid Recharge",
+      "mobile": "9876789099"
+    },
+    {
+      "id": "ed47",
+      "connection": "Prepaid to Postpaid",
+      "mobile": "9876543123",
+      "name": "sakthi",
+      "city": "thanjavur",
+      "area": "pudhukottai",
+      "pincode": "623456"
+    },
+    {
+      "id": "d74a",
+      "connection": "New Connection",
+      "mobile": "8767890987",
+      "name": "deepa",
+      "city": "tirunelveli",
+      "area": "vanarpettai",
+      "pincode": "628098"
+    },
+    {
+      "id": "65f8",
+      "connection": "New Connection",
+      "mobile": "9876567890",
+      "name": "gomu",
+      "city": "tirunelveli",
+      "area": "thatchanallur",
+      "pincode": "635678"
+    },
+    {
+      "id": "d148",
+      "connection": "Prepaid Recharge",
+      "mobile": "6767676767"
+    }
+  ]
+}

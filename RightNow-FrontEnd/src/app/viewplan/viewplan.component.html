@@ -1,0 +1,100 @@
+<div class="page">
+
+  <section class="hero-full">
+    <img src="assets/images/paid.png" class="hero-img" />
+
+    <div class="hero-overlay">
+      <h1>Best Postpaid Plans</h1>
+      <p>Unlimited data • High speed • OTT benefits</p>
+    </div>
+  </section>
+
+  <section class="plans">
+    <h2>Choose the best Wi-Fi plan for your home</h2>
+
+    <div class="grid">
+      <div class="card" *ngFor="let plan of plans">
+
+        <span class="tag">Individual Plan</span>
+
+        <h3>₹{{ plan.price }} <small>/month</small></h3>
+
+        <div class="stats">
+          <div>
+            <b>{{ plan.speed }}</b>
+            <span>Speed</span>
+          </div>
+          <div>
+            <b>{{ plan.data }}</b>
+            <span>Data</span>
+          </div>
+        </div>
+
+        <div class="ott">
+          {{ plan.ott.join(' • ') }}
+        </div>
+
+        <div class="actions">
+          <a (click)="open(plan)">View Details</a>
+
+          <button (click)="buy(plan)">Buy Now</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="modal-overlay" *ngIf="activePlan">
+
+  <div class="modal-box airtel-modal">
+
+    <span class="close" (click)="close()">×</span>
+
+    <h1 class="modal-price">₹{{ activePlan.price }}</h1>
+
+    <div class="modal-banner">
+      <strong>New packs, more benefits</strong>
+      <p>with Postpaid Plus</p>
+    </div>
+
+    <div class="modal-benefits">
+
+      <div class="benefit-item">
+        <strong>Unlimited</strong>
+        <span>Calls</span>
+      </div>
+
+      <div class="benefit-item">
+        <strong>{{ activePlan.data }}</strong>
+        <span>Data</span>
+      </div>
+
+      <div class="benefit-item">
+        <strong>30 Days</strong>
+        <span>Validity</span>
+      </div>
+
+      <div class="benefit-item">
+        <strong>{{ activePlan.speed }}</strong>
+        <span>Speed</span>
+      </div>
+
+    </div>
+
+    <details class="modal-expand">
+      <summary>More Rewards</summary>
+      <p>OTT Apps: {{ activePlan.ott.join(', ') }}</p>
+    </details>
+
+    <details class="modal-expand">
+      <summary>Terms & Conditions</summary>
+      <p>Standard postpaid terms apply.</p>
+    </details>
+
+    <button class="recharge-btn" (click)="buy(activePlan)">
+      Recharge Now
+    </button>
+
+  </div>
+</div>
