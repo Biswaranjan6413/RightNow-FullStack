@@ -19,12 +19,12 @@ import { PostPaidComponent } from './postpaid/postpaid.component';
 import { ViewPlanComponent } from './viewplan/viewplan.component';
 
 const routes: Routes = [
-  {path:"", component : HomeComponent},
-    { path: '', redirectTo: 'prepaid', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
+
   { path: 'prepaid', component: PrepaidComponent },
   { path: 'recharge/:mobile', component: RechargeComponent },
-  { path: 'register', component: RegisterComponent},
-  { path: 'register-address', redirectTo: 'register-address', pathMatch: 'full' },
+
+  { path: 'register', component: RegisterComponent },
   { path: 'register-address', component: RegstrationAddressComponent },
   { path: 'registration', redirectTo: 'registraion', pathMatch: 'full' },
   { path: 'registration' , component: RegistrationComponent},
@@ -49,7 +49,19 @@ const routes: Routes = [
  {path: 'postpaid', component: PostPaidComponent},
   {path: 'viewplan', component: ViewPlanComponent}
 
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'careers', component: CareersComponent },
+  { path: 'offers', component: OffersComponent },
+  { path: 'help-center', component: HelpCenterComponent },
+  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'faqs', component: FaqsComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms-conditions', component: TermsConditionsComponent },
+
+  { path: 'post', component: PostPaidComponent },
+  { path: 'viewplan', component: ViewPlanComponent }
 ];
+
 
 
 @NgModule({
