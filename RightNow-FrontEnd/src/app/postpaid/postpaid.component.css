@@ -1,0 +1,156 @@
+.page-container {
+  display: flex;
+  gap: 50px;
+  padding: 40px;
+  background: #eef0ff;
+  flex-wrap: wrap;
+}
+.left-img {
+  width: 100%;
+  height: 550px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+
+.left-panel {
+  flex: 1 1 300px;
+}
+
+.left-panel h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.left-panel p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.right-panel {
+  flex: 1 1 450px;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  cursor: pointer;
+  padding-right: 10px; 
+}
+.arrow-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
+.step-box {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.step-header-no-arrow {
+  margin-bottom: 15px;
+}
+
+.step-no {
+  font-size: 13px;
+  background: #e7e9ff;
+  padding: 3px 7px;
+  border-radius: 5px;
+  color: #5a63ff;
+  font-weight: bold;
+}
+
+.step-info h3 {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.arrow-icon {
+  font-size: 20px;
+  color: #444;
+}
+
+.dropdown {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  padding: 12px;
+  background: #f6f7ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.option input {
+  transform: scale(1.2);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #f70404;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  margin-top: 20px;
+  font-style: bold;
+}
+
+.selected-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #e9ecff;
+}
+
+.submit-btn {
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 20px;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}
+

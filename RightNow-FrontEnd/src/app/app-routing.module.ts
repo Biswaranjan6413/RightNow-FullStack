@@ -15,6 +15,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { PostPaidComponent } from './postpaid/postpaid.component';
+import { ViewPlanComponent } from './viewplan/viewplan.component';
 
 const routes: Routes = [
   {path:"", component : HomeComponent},
@@ -28,6 +30,7 @@ const routes: Routes = [
   { path: 'registration' , component: RegistrationComponent},
   { path: 'login', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
+
   { path: 'about-us', redirectTo: 'about-us', pathMatch: 'full' },
   { path: 'about-us', component: AboutUsComponent},
    { path: 'careers', redirectTo: 'careers', pathMatch: 'full' },
@@ -42,10 +45,9 @@ const routes: Routes = [
   { path: 'faqs', component: FaqsComponent},
    { path: 'privacy-policy', redirectTo: 'privacy-policy', pathMatch: 'full' },
   { path: 'privacy-policy', component: PrivacyPolicyComponent},
-  { path: 'terms-conditions', component: TermsConditionsComponent}
- 
- 
-
+  { path: 'terms-conditions', component: TermsConditionsComponent},
+ {path: 'postpaid', component: PostPaidComponent},
+  {path: 'viewplan', component: ViewPlanComponent}
 
 ];
 

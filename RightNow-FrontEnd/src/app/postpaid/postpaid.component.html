@@ -1,0 +1,89 @@
+<div class="page-container">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+  <div class="left-panel">
+    <h1>Get Vodafone Postpaid Connection</h1>
+    <p>Enjoy a stronger network with Postpaid</p>
+    <img src="assets/images/post.jpg" class="left-img" alt="Postpaid Banner" />
+  </div>
+
+  <div class="right-panel">
+
+    <div class="step-box">
+      <div class="step-header" (click)="toggleStep1()">
+        <div class="step-info">
+          <span class="step-no">STEP 1</span>
+          <h3>Pick a connection type</h3>
+
+          <p class="selected-text" *ngIf="connection">
+            <strong>{{ connection }}</strong>
+          </p>
+        </div>
+
+        <i 
+  class="fa arrow-icon"
+  [ngClass]="step1Open ? 'fa-angle-up' : 'fa-angle-down'">
+</i>
+
+      </div>
+
+      <div class="dropdown" *ngIf="step1Open">
+
+        <label class="option" (click)="selectConnection('New Connection')">
+          <span>New Connection</span>
+          <input type="radio" name="conn" [checked]="connection === 'New Connection'" />
+        </label>
+
+        <label class="option" (click)="selectConnection('Prepaid to Postpaid')">
+          <span>Prepaid to Postpaid</span>
+          <input type="radio" name="conn" [checked]="connection === 'Prepaid to Postpaid'" />
+        </label>
+
+        <label class="option" (click)="selectConnection('Port SIM to Airtel')">
+          <span>Port SIM to Vodafone</span>
+          <input type="radio" name="conn" [checked]="connection === 'Port SIM to Airtel'" />
+        </label>
+
+      </div>
+    </div>
+
+    <div class="step-box">
+      <div class="step-header-no-arrow">
+        <span class="step-no">STEP 2</span>
+        <h3>Add contact details</h3>
+      </div>
+
+      <div class="form-row">
+        <input type="text" placeholder="Enter mobile number" [(ngModel)]="mobile" />
+      </div>
+
+      <div class="form-row">
+        <input type="text" placeholder="Enter name" [(ngModel)]="name" />
+      </div>
+    </div>
+
+    <div class="step-box">
+      <div class="step-header-no-arrow">
+        <span class="step-no">STEP 3</span>
+        <h3>Add delivery address to view plans</h3>
+      </div>
+
+      <div class="form-row">
+        <input type="text" placeholder="City" [(ngModel)]="city" />
+        <input type="text" placeholder="Area" [(ngModel)]="area" />
+      </div>
+
+      <div class="form-row">
+        <input type="text" placeholder="Pincode" [(ngModel)]="pincode" />
+      </div>
+    </div>
+
+    <button (click)="submitForm()" class="submit-btn">
+      Submit Postpaid Request
+    </button>
+
+  </div>
+</div>

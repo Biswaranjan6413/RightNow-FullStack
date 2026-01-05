@@ -26,6 +26,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { PostPaidComponent } from './postpaid/postpaid.component';
+import { ViewPlanComponent } from './viewplan/viewplan.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
     ContactUsComponent,
     FaqsComponent,
     PrivacyPolicyComponent,
-    TermsConditionsComponent
+    TermsConditionsComponent,
+    PostPaidComponent,
+    ViewPlanComponent
   ],
   imports: [
     BrowserModule,
