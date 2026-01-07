@@ -22,6 +22,7 @@ export class RegistrationComponent {
       firstname: ['', Validators.required],
       lastname: [''],
       email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
 
       idProofType: ['', Validators.required],
@@ -51,12 +52,7 @@ export class RegistrationComponent {
     this.showAddress = !this.showAddress;
   }
 
-  // copyAddress(event: any) {
-  //   if (event.target.checked) {
-  //     const current = this.regForm.get('address.current')?.value;
-  //     this.regForm.get('address.permanent')?.patchValue(current);
-  //   }
-  // }
+
  copyAddress(event: any) {
   const permanentGroup = this.regForm.get('address.permanent');
 
@@ -84,14 +80,9 @@ export class RegistrationComponent {
     }
   }
 
-//   register() {
-//  this.regService.saveRegistration(this.regForm.value)
-//       .subscribe(() => {
-//         alert('Registration Saved Successfully!');
-//         this.regForm.reset();
-//       });  }
-
 // register() {
+//   this.formSubmitted = true;
+
 //   if (this.regForm.invalid) {
 //     this.regForm.markAllAsTouched();
 //     return;
@@ -101,24 +92,38 @@ export class RegistrationComponent {
 //     .subscribe(() => {
 //       alert('Registration Saved Successfully!');
 //       this.regForm.reset();
+//       this.formSubmitted = false;
 //     });
-// }
-
+// } 
 
 register() {
   this.formSubmitted = true;
 
+  // 1️⃣ Stop if form is invalid
   if (this.regForm.invalid) {
     this.regForm.markAllAsTouched();
     return;
   }
 
-  this.regService.saveRegistration(this.regForm.value)
-    .subscribe(() => {
+  // 2️⃣ Get clean form data
+  const formData = this.regForm.getRawValue(); // IMPORTANT
+
+  // 3️⃣ Debug: check what is being sent
+  console.log('Registration Data:', formData);
+
+  // 4️⃣ Send data to backend
+  this.regService.saveRegistration(formData).subscribe({
+    next: () => {
       alert('Registration Saved Successfully!');
       this.regForm.reset();
       this.formSubmitted = false;
-    });
+    },
+    error: (err) => {
+      console.error('Registration Failed', err);
+      alert('Something went wrong!');
+    }
+  });
 }
+
 
 }

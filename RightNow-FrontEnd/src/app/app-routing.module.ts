@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PrepaidComponent } from './prepaid/prepaid.component';
 import { RechargeComponent } from './recharge/recharge.component'; 
-import { RegisterComponent } from './register/register.component';
-import { RegstrationAddressComponent } from './regstration-address/regstration-address.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -17,6 +15,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { PostPaidComponent } from './postpaid/postpaid.component';
 import { ViewPlanComponent } from './viewplan/viewplan.component';
+import { RegisterComplaintComponent } from './register-complaint/register-complaint.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,8 +23,6 @@ const routes: Routes = [
   { path: 'prepaid', component: PrepaidComponent },
   { path: 'recharge/:mobile', component: RechargeComponent },
 
-  { path: 'register', component: RegisterComponent },
-  { path: 'register-address', component: RegstrationAddressComponent },
   { path: 'registration', redirectTo: 'registraion', pathMatch: 'full' },
   { path: 'registration' , component: RegistrationComponent},
   { path: 'login', redirectTo: 'login', pathMatch: 'full' },
@@ -47,7 +44,7 @@ const routes: Routes = [
   { path: 'privacy-policy', component: PrivacyPolicyComponent},
   { path: 'terms-conditions', component: TermsConditionsComponent},
  {path: 'postpaid', component: PostPaidComponent},
-  {path: 'viewplan', component: ViewPlanComponent}
+  {path: 'viewplan', component: ViewPlanComponent},
 
   { path: 'about-us', component: AboutUsComponent },
   { path: 'careers', component: CareersComponent },
@@ -59,7 +56,8 @@ const routes: Routes = [
   { path: 'terms-conditions', component: TermsConditionsComponent },
 
   { path: 'post', component: PostPaidComponent },
-  { path: 'viewplan', component: ViewPlanComponent }
+  { path: 'viewplan', component: ViewPlanComponent },
+  {path: 'register-complaint', component: RegisterComplaintComponent}
 ];
 
 

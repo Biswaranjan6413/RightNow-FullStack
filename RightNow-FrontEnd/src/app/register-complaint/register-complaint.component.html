@@ -1,0 +1,49 @@
+<div class="page-bg">
+  <div class="complaint-card">
+
+    <div class="header">
+      <h2>Register Complaint</h2>
+    </div>
+
+    <form [formGroup]="complaintForm" (ngSubmit)="submitComplaint()">
+
+     
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name" placeholder="Enter your name">
+      </div>
+
+    
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" formControlName="phone" placeholder="Enter phone number">
+      </div>
+
+      
+      <div class="form-group">
+        <label>Complaint Type</label>
+        <select formControlName="type">
+          <option value="">Select type</option>
+          <option>Internet Issue</option>
+          <option>Billing Issue</option>
+          <option>Network Issue</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+  
+      <div class="form-group">
+        <label>Complaint Details</label>
+        <textarea rows="4" formControlName="details"
+          placeholder="Describe your issue"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Submit Complaint
+      </button>
+
+    </form>
+
+  </div>
+</div>
+

@@ -14,7 +14,8 @@
 
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 20px; 
+           
 }
 
 .menu a {
@@ -29,6 +30,41 @@
   color: black;
   background-color: rgb(242, 242, 242);
   border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.drop-btn {
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  background: white;
+  min-width: 160px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a {
+  color: #1e293b;
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #f1f5f9;
+}
+
+/* Show submenu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .account {

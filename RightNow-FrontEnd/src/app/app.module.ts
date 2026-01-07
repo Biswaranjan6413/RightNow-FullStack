@@ -9,10 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { PrepaidComponent } from './prepaid/prepaid.component';
 import { RechargeComponent } from './recharge/recharge.component';
-import { RegisterComponent } from './register/register.component';
 import { BuyConnectionComponent } from './buy-connection/buy-connection.component';
 import { RecommendedComponent } from './recommended/recommended.component';
-import { RegstrationAddressComponent } from './regstration-address/regstration-address.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +26,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { PostPaidComponent } from './postpaid/postpaid.component';
 import { ViewPlanComponent } from './viewplan/viewplan.component';
+import { RegisterComplaintComponent } from './register-complaint/register-complaint.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +35,10 @@ import { ViewPlanComponent } from './viewplan/viewplan.component';
     HeaderComponent,
     BuyConnectionComponent,
     RecommendedComponent,
-    RegstrationAddressComponent,
     PrepaidComponent,
     RechargeComponent,
-    RegisterComponent,
     BuyConnectionComponent,
     RecommendedComponent,
-    RegstrationAddressComponent,
     RegistrationComponent,
     LoginComponent,
     FooterComponent,
@@ -55,7 +51,8 @@ import { ViewPlanComponent } from './viewplan/viewplan.component';
     PrivacyPolicyComponent,
     TermsConditionsComponent,
     PostPaidComponent,
-    ViewPlanComponent
+    ViewPlanComponent,
+    RegisterComplaintComponent
   ],
   imports: [
     BrowserModule,
